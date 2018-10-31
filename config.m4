@@ -102,8 +102,8 @@ dnl      PHP_ADD_INCLUDE($i/include/libavdevice/)
 
 dnl  CFLAGS="$CFLAGS -Wall -fno-strict-aliasing"
 
-  PHP_NEW_EXTENSION(ffmpeg, ffmpeg-php.c ffmpeg_movie.c ffmpeg_frame.c ffmpeg_errorhandler.c ffmpeg_tools.c, $ext_shared)
-dnl PHP_ADD_EXTENSION_DEP(ffmpeg, gd)
+  PHP_NEW_EXTENSION(ffmpeg,ffprobe.c ffmpeg-php.c ffmpeg_movie.c ffmpeg_frame.c ffmpeg_errorhandler.c ffmpeg_tools.c, $ext_shared)
+dnl PHP_ADD_EXTENSION_DEP(ffmpeg,ffprobe, gd)
 
   PHP_SUBST(FFMPEG_SHARED_LIBADD)
   AC_DEFINE(HAVE_FFMPEG_PHP,1,[ ])
